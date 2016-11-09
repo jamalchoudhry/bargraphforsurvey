@@ -46,37 +46,37 @@
 </header>
 
 <body>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-    google.charts.load("current", {packages:['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ["", "", { role: "style" } ],
-            ["All Classes All Year Long", 4, "silver"],
-            ["Different Classes Each Semester", 17, "gold"]
-        ]);
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load("current", {packages:['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ["", "", { role: "style" } ],
+                    ["All Classes All Year Long", 4, "silver"],
+                    ["Different Classes Each Semester", 17, "gold"]
+                ]);
 
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1,
-            { calc: "stringify",
-                sourceColumn: 1,
-                type: "string",
-                role: "annotation" },
-            2]);
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0, 1,
+                    { calc: "stringify",
+                        sourceColumn: 1,
+                        type: "string",
+                        role: "annotation" },
+                    2]);
 
-        var options = {
-            title: "How Will You Take Your HS Classes?",
-            width: 600,
-            height: 400,
-            bar: {groupWidth: "95%"},
-            legend: { position: "none" },
-        };
-        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-        chart.draw(view, options);
-    }
-</script>
-<div id="columnchart_values" style="width: 900px; height: 300px;">
+                var options = {
+                    title: "How Will You Take Your HS Classes?",
+                    width: 600,
+                    height: 400,
+                    bar: {groupWidth: "95%"},
+                    legend: { position: "none" },
+                };
+                var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+                chart.draw(view, options);
+            }
+        </script>
+    <div id="columnchart_values" style="width: 900px; height: 300px;">
     <div class="container">
         <p style="text-align:center;">We chose a bar graph to also show this data. We felt that this graph showed the data in a much more simpler way to show the exact data that we want to see. We also felt that we needed more than one graph to show our data.</p>
     </div>
